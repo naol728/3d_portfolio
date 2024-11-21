@@ -1,10 +1,18 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
+import { Outlet } from 'react-router-dom'
 
 export default function Applayout() {
   return (
     <div>
-      <Navbar />
+        <div >
+        <Navbar />
+        </div>
+
+      <main className='h-[90%]'>
+        <Outlet />
+      </main>
     </div>
+
   )
 }

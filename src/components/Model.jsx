@@ -1,9 +1,8 @@
 import React from 'react'
 import { Suspense } from 'react'
 import {Canvas} from '@react-three/fiber'
-import './App.css'
 import {Environment, OrbitControls } from'@react-three/drei'
-import Asian from '../public/Asian'
+import Scene from '../../public/Scene'
 export default function Model() {
   return (
     <div >
@@ -12,7 +11,7 @@ export default function Model() {
           <ambientLight intensity={2} />
           <OrbitControls />
 
-          <Asian />
+          <Scene />
         </Suspense>
         <Environment preset="sunset" />
       </Canvas>
