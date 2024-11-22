@@ -2,7 +2,7 @@ import React from 'react'
 import { Suspense } from 'react'
 import {Canvas} from '@react-three/fiber'
 import {Environment, OrbitControls } from'@react-three/drei'
-import Scene from '../../public/Scene'
+import Desktop from '../../public/Desktop'
 export default function Model() {
   return (
     <div >
@@ -11,7 +11,7 @@ export default function Model() {
           <ambientLight intensity={2} />
           <OrbitControls />
 
-          <Scene />
+          <Desktop />
         </Suspense>
         <Environment preset="sunset" />
       </Canvas>
