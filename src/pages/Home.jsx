@@ -1,19 +1,37 @@
 import React from 'react'
 import Model from '../components/Model'
+import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
 import "../index.css"
 export default function Home() {
+  const words = [
+    {
+      text: "hello",
+    },
+    {
+      text: "i'm",
+    },
+    {
+      text: "Naol ",
+      className: "text-blue-500 ml-1 dark:text-blue-500",
+    },
+   
+  ];
   return (
-    <div className='flex justify-around h-[95dvh] bg-slate-600'>
-       <div className='text-slate-800 flex flex-col h-full justify-center m-5'>
-        <h1 className='text-5xl font-extrabold text-fuchsia-500 shadow-lg'> Hello I'm Naol </h1>
-        <p className='text-wrap w-96 mt-20 font-bold  text-2xl text-slate-300 shadow-xl' > 
-          Front-End Web Developer & Software Engineering Student.
-           Creating engaging and user-friendly web experiences.</p>
-       </div>
+    <div className='h-[90vh] flex justify-around items-center  ' >
 
-       <div className='w-[50%] bg-slate-600 ' >
-        <Model />
-       </div>
+     <div className='flex w-[50%] p-10 justify-center items-center'>
+      <div>
+        <h1><TypewriterEffectSmooth words={words} /></h1>
+       
+        <p className='text-xl mt-6 font-bold text-slate-300'> a front-end web developer and software engineering student passionate about building innovative and responsive web applications. Let's connect!</p>
+      </div>
+     </div>
+
+
+      <div className='size-[50%] h-full flex justify-center items-center  '>
+      <Model />
+      </div>
+    
     </div>
   )
 }

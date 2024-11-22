@@ -9,7 +9,7 @@ export default function Applayout() {
         <Navbar />
         </div>
 
-      <main className='h-[90%]'>
+      <main>
         <Outlet />
       </main>
     </div>

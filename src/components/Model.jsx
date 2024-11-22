@@ -3,18 +3,18 @@ import { Suspense } from 'react'
 import {Canvas} from '@react-three/fiber'
 import {Environment, OrbitControls } from'@react-three/drei'
 import Desktop from '../../public/Desktop'
+import "../index.css"
 export default function Model() {
   return (
-    <div >
+    < >
       <Canvas>
         <Suspense fallback={null} >
-          <ambientLight intensity={2} />
+          <ambientLight intensity={1.5} />
           <OrbitControls />
-
-          <Desktop />
+          <Desktop  />
         </Suspense>
-        <Environment preset="sunset" />
+        <Environment preset="apartment" />
       </Canvas>
-    </div>
+    </>
   )
 }
